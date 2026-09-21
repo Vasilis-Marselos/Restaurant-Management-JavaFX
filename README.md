@@ -2,8 +2,6 @@
 
 JavaFX desktop application combining a restaurant customer interface with a management dashboard. Academic group project for **CN5004 — Advanced Programming (2025)**.
 
-**Authors:** Thodoris Gkrekou and Vasileios Marselos. Features below describe the shared project; the submitted report does not allocate individual implementation responsibilities.
-
 ## Features
 - Categorised menu, dish customisation, cart editing and order totals.
 - Table reservations with date/time selection and a 3D restaurant layout.
