@@ -1,0 +1,128 @@
+.dashboard-title {
+    -fx-font-size: 2.4em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1976d2;
+    -fx-padding: 0 0 16 0;
+    -fx-font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+.dashboard-section-title {
+    -fx-font-size: 1.3em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #1976d2;
+    -fx-font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+    -fx-padding: 0 0 8 0;
+}
+
+.dashboard-card {
+    -fx-background-color: #fff;
+    -fx-background-radius: 18;
+    -fx-effect: dropshadow(gaussian, #1976d21a, 16, 0.19, 0, 4);
+    -fx-padding: 22 28 22 28;
+    -fx-alignment: center;
+    -fx-min-width: 170;
+    -fx-min-height: 85;
+}
+
+.dashboard-card-value {
+    -fx-font-size: 2.1em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #636e72;
+    -fx-padding: 4 0 0 0;
+    -fx-font-family: "Consolas", "Roboto Mono", "Courier New", monospace;
+}
+
+.dashboard-card-value.income {
+    -fx-text-fill: #00b894;
+}
+
+.dashboard-card-title {
+    -fx-font-size: 1em;
+    -fx-font-weight: 500;
+    -fx-text-fill: #636e72;
+    -fx-font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+.table-card {
+    -fx-min-width: 320;
+    -fx-padding: 24 36 24 36;
+}
+
+.table-view {
+    -fx-background-color: #fafbfc;
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-border-color: #e1e5ea;
+    -fx-table-cell-border-color: #e1e5ea;
+    -fx-font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1976d2;
+    -fx-background-radius: 10 10 0 0;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 36px;
+    -fx-font-size: 1em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #fff;
+    -fx-border-width: 0 0 1 0;
+}
+
+.table-view .table-row-cell:filled:selected, .table-view .table-row-cell:filled:hover {
+    -fx-background-color: #e3f2fd;
+}
+
+.table-view .table-cell {
+    -fx-font-size: 1.05em;
+    -fx-padding: 4 8 4 8;
+}
+
+.date-picker, .date-picker .text-field {
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.label {
+    -fx-font-family: "Segoe UI", "Roboto", Arial, sans-serif;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1976d2 !important;
+    -fx-background-radius: 12 12 0 0;
+    -fx-padding: 0;
+}
+
+.table-view .column-header,
+.table-view .column-header .label {
+    -fx-background-color: transparent !important;
+    -fx-text-fill: #fff !important;
+    -fx-font-weight: bold;
+    -fx-font-size: 1em;
+}
+
+.table-view .filler {
+    -fx-background-color: #1976d2 !important;
+}
+
+
+.table-view {
+    -fx-background-radius: 12;
+    -fx-border-radius: 12;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}
+
+.table-view .column-header-background {
+    -fx-background-radius: 12 12 0 0;
+    -fx-border-radius: 12 12 0 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+
+.table-view .filler {
+    -fx-background-color: #1976d2 !important;
+    -fx-background-radius: 0 12 0 0;
+}

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane prefHeight="900" prefWidth="1550" stylesheets="@CSS/styles.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.RestaurantController">
+
+    <children>
+        <!-- Slideshow Pane -->
+        <Pane fx:id="slideshowPane" prefHeight="900" prefWidth="1550">
+            <children>
+                <ImageView fx:id="slideshowView" fitHeight="900.0" fitWidth="1550.0" pickOnBounds="true" preserveRatio="false" />
+                <HBox alignment="CENTER" layoutX="350.0" layoutY="850.0" spacing="20.0" />
+                <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="14.0" layoutY="416.0" rotate="180.0">
+                    <image>
+                        <Image url="@image/pngwing.com.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="57.0" fitWidth="189.0" layoutX="681.0" layoutY="752.0">
+                    <image>
+                        <Image url="@image/Reserve-Now.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="69.0" fitWidth="69.0" layoutX="1467.0" layoutY="416.0">
+                    <image>
+                        <Image url="@image/pngwing.com.png" />
+                    </image>
+                </ImageView>
+
+                <Button fx:id="prevBtn" layoutX="5.0" layoutY="416.0" onAction="#onPrevClicked" opacity="0.0" prefHeight="69.0" prefWidth="100.0" style="-fx-cursor: hand;" text="←" />
+                <Button fx:id="nextBtn" layoutX="1446.0" layoutY="416.0" onAction="#onNextClicked" opacity="0.0" prefHeight="69.0" prefWidth="100.0" style="-fx-cursor: hand;" text="→" />
+                <Button fx:id="makeResBtn" layoutX="685.0" layoutY="758.0" onAction="#TableReservation" opacity="0.0" prefHeight="46.0" prefWidth="180.0" style="-fx-cursor: hand;" />
+            </children>
+        </Pane>
+
+    </children>
+</AnchorPane>

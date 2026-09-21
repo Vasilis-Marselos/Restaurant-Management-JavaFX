@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="900.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.SceneController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1550.0" style="-fx-background-color: #f5f5f1;">
+         <children>
+            <ImageView fitHeight="200.0" fitWidth="1558.0" layoutX="-8.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/Menu.JPG" />
+               </image>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <GridPane layoutX="86.0" layoutY="251.0" prefHeight="600.0" prefWidth="1380.0" style="-fx-background-color: white;">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="834.0" minWidth="10.0" prefWidth="725.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="941.0" minWidth="0.0" prefWidth="725.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <children>
+                  <Pane prefHeight="268.0" prefWidth="756.0">
+                     <children>
+                        <ImageView fx:id="imageView11" fitHeight="200.0" fitWidth="234.0">
+                           <image>
+                              <Image url="@image/Butter_Chicken.JPG" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Butter Chicken">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ζουμερό κοτόπουλο σε γιαούρτι και μπαχαρικά, σοταρισμένο σε βούτυρο, με σάλτσα καρυδιού και ντομάτας. Συνοδεύεται από ρύζι μπασμάτι, κόλιανδρο και κρέμα." wrappingWidth="319.44927978515625">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane disable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                     <children>
+                        <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chicken Calzone">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αφράτο ζυμάρι με ελληνικό γιαούρτι, γεμισμένο με ζουμερό κοτόπουλο, φρέσκια μοτσαρέλα και πικάντικη σάλτσα ντομάτας. Αρωματισμένο με ιταλικά βότανα για την απόλυτη γεύση." wrappingWidth="319.44927978515625">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="imageView21" fitHeight="200.0" fitWidth="234.0">
+                           <image>
+                              <Image url="@image/Chicken_Calzone.JPG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="195.0" prefWidth="729.0" GridPane.rowIndex="1">
+                     <children>
+                        <ImageView fx:id="imageView31" fitHeight="196.0" fitWidth="234.0" layoutY="2.0">
+                           <image>
+                              <Image url="@image/Cajun_Chicken_Pasta.JPG" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cajun Chicken Pasta">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Τραγανό κοτόπουλο με καγιέν, σερβιρισμένο με πλούσια σάλτσα ντομάτας, κρέμα τυρί και μοτσαρέλα. Συνοδεύεται από πένες, φρέσκο σπανάκι και πιπεριές για ένα καυτερό τελείωμα." wrappingWidth="319.44927978515625">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                     <children>
+                        <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Creamy Beef Mac &amp; Cheese">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Μακαρόνια με αρωματισμένο κιμά, μανιτάρια και παδρόν πιπεριές, σερβιρισμένα με κρεμώδη σάλτσα με τυρί και sour cream. Ολοκληρώνεται με φρέσκια μαϊντανό και πιπεριές για έξτρα γεύση." wrappingWidth="319.44927978515625">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="imageView41" fitHeight="196.0" fitWidth="234.0" layoutY="2.0">
+                           <image>
+                              <Image url="@image/Creamy_Beef_Mac_and_Cheese.JPG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                     <children>
+                        <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Classic Carbonara">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Απαλή σάλτσα καρμπονάρα με αυγά, κρέμα και παρμεζάνα, σερβιρισμένη με φρέσκες πένες και τραγανό μπέικον." wrappingWidth="319.44927978515625">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="imageView51" fitHeight="200.0" fitWidth="234.0" layoutY="1.0">
+                           <image>
+                              <Image url="@image/Classic_Carbonara.JPG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                     <children>
+                        <Text layoutX="300.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Μαριναρισμένο κοτόπουλο σε αρωματικά μπαχαρικά, σε πλούσια σάλτσα ντομάτας και καρύδας, σερβιρισμένο με αρωματισμένο pilau ρύζι με μπαχαρικά και βούτυρο." wrappingWidth="319.44927978515625">
+                           <font>
+                              <Font name="System Italic" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chicken Tikka Masala with Pilau Rice">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Text>
+                        <ImageView fx:id="imageView61" fitHeight="200.0" fitWidth="234.0" layoutY="1.0">
+                           <image>
+                              <Image url="@image/Chicken_Tikka_Masala_with_Pilau_Rice.JPG" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </GridPane>
+            <Button layoutX="498.0" layoutY="92.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="HOME" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="630.0" layoutY="92.0" mnemonicParsing="false" onAction="#OurStory" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="OUR STORY" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="814.0" layoutY="92.0" mnemonicParsing="false" onAction="#breakfast_menu1" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="MENU" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <Button layoutX="920.0" layoutY="92.0" mnemonicParsing="false" onAction="#Contact" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="CONTACT" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="113.0" fitWidth="93.0" layoutX="724.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@image/logo1.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="313.0" layoutY="149.0" mnemonicParsing="false" onAction="#breakfast_menu1" opacity="0.9" prefHeight="51.0" prefWidth="169.0" stylesheets="@CSS/HeaderButton.css" text="BREAKFAST" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="511.0" layoutY="149.0" mnemonicParsing="false" onAction="#maincourse_menu1" opacity="0.9" prefHeight="51.0" prefWidth="200.0" stylesheets="@CSS/HeaderButton.css" text="MAIN COURSE" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="840.0" layoutY="149.0" mnemonicParsing="false" onAction="#appetizers_menu1" opacity="0.9" prefHeight="51.0" prefWidth="176.0" stylesheets="@CSS/HeaderButton.css" text="APPETIZERS" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="1058.0" layoutY="149.0" mnemonicParsing="false" onAction="#beverages_menu1" opacity="0.9" prefHeight="51.0" prefWidth="169.0" stylesheets="@CSS/HeaderButton.css" text="BEVERAGES" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+            <JFXButton graphicTextGap="0.0" layoutX="1467.0" layoutY="522.0" onAction="#maincourse_menu2" prefHeight="59.0" prefWidth="84.0" ripplerFill="#838383" style="-fx-cursor: hand;" text=" ">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/next.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </JFXButton>
+            <Button layoutX="713.0" layoutY="149.0" mnemonicParsing="false" onAction="#MainCourseOrder" prefHeight="51.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="ORDER" textFill="#d2ab66">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</Pane>

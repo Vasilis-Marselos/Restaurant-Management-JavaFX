@@ -1,0 +1,44 @@
+.alert {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #d2ab66;
+    -fx-border-width: 2px;
+    -fx-font-family: "Arial", sans-serif;
+    -fx-font-size: 14px;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, #d2ab66, 10, 0.5, 0, 2);
+}
+
+
+.alert .dialog-pane .header {
+    -fx-background-color: #d2ab66;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+    -fx-font-size: 16px;
+    -fx-background-radius: 10px 10px 0 0;
+}
+
+
+.alert .dialog-pane .content {
+    -fx-text-fill: #333333;
+    -fx-font-size: 14px;
+    -fx-line-spacing: 2px;
+    -fx-padding: 10px 20px;
+}
+
+
+.alert .button {
+    -fx-background-color: #d2ab66;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-background-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, #d2ab66, 5, 0.5, 0, 2);
+}
+
+.alert .button:hover {
+    -fx-background-color: #c28b5d;
+    -fx-effect: dropshadow(gaussian, #c28b5d, 5, 0.5, 0, 2);
+}

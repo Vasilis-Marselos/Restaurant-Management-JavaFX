@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1550.0" style="-fx-background-color: #f5f5f1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.CartController">
+    <VBox alignment="TOP_CENTER" layoutX="50.0" layoutY="125.0" prefHeight="710.0" prefWidth="1450.0" spacing="20.0">
+      <Text opacity="0.8" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="CART">
+         <font>
+            <Font name="System Bold" size="40.0" />
+         </font>
+      </Text>
+        <Label fx:id="tableInfoLabel" text="Τραπέζι: - | Ώρα: -" />
+        <!-- TableView για προϊόντα στο καλάθι -->
+        <TableView fx:id="cartTable" prefHeight="600.0" prefWidth="1400.0" stylesheets="@CSS/table.css">
+            <columns>
+                <TableColumn fx:id="dishNameColumn" prefWidth="320.0" text="Πιάτο" />
+                <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="110.0" text="Ποσότητα" />
+                <TableColumn fx:id="categoryColumn" prefWidth="100.0" text="Κατηγορία" />
+                <TableColumn fx:id="netPriceColumn" prefWidth="100.0" text="Καθαρή Τιμή" />
+                <TableColumn fx:id="vatColumn" prefWidth="100.0" text="ΦΠΑ" />
+                <TableColumn fx:id="totalPriceColumn" prefWidth="100.0" text="Σύνολο" />
+                <TableColumn fx:id="extrasColumn" prefWidth="340.0" text="Extras" />
+                <TableColumn fx:id="descriptionColumn" minWidth="0.0" prefWidth="278.0" text="Οδηγίες" />
+            </columns>
+        </TableView>
+
+        <!-- Κάτω μέρος: Σύνολο και κουμπιά -->
+        <HBox alignment="CENTER_RIGHT" prefWidth="1400.0" spacing="30.0">
+            <VBox alignment="CENTER_LEFT">
+                <Label fx:id="totalPriceLabel" style="-fx-font-size: 28px; -fx-text-fill: #2e7d32;" text="€0.00" />
+            </VBox>
+
+            <HBox spacing="15.0">
+                <Button fx:id="undoRemoveButton" style="-fx-font-size: 18px; -fx-background-color: #cfd8dc; -fx-cursor: hand;" text="Επιστροφή" />
+                <Button fx:id="clearCartButton" style="-fx-font-size: 18px; -fx-background-color: #90a4ae; -fx-text-fill: white; -fx-cursor: hand;" text="Καθαρισμός Καλαθιού" />
+                <Button fx:id="removeSelectedButton" style="-fx-font-size: 18px; -fx-background-color: #ef5350; -fx-text-fill: white; -fx-cursor: hand;" text="Αφαίρεση Επιλεγμένων" />
+                <Button fx:id="confirmOrderButton" prefWidth="242.0" style="-fx-font-size: 18px; -fx-background-color: #66bb6a; -fx-text-fill: white; -fx-cursor: hand;" text="Ολοκλήρωση Παραγγελίας" />
+            </HBox>
+        </HBox>
+    </VBox>
+   <AnchorPane layoutY="-12.0" prefHeight="100.0" prefWidth="1550.0" style="-fx-background-color: White;">
+      <children>
+         <Button layoutX="321.0" layoutY="47.0" mnemonicParsing="false" onAction="#BreakfastOrder" opacity="0.9" prefHeight="51.0" prefWidth="169.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="BREAKFAST" textFill="#d2ab66">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Button>
+         <Button layoutX="519.0" layoutY="47.0" mnemonicParsing="false" onAction="#MainCourseOrder" opacity="0.9" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="MAIN COURSE" textFill="#d2ab66">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Button>
+         <Button layoutX="832.0" layoutY="47.0" mnemonicParsing="false" onAction="#AppetizersOrder" opacity="0.9" prefHeight="51.0" prefWidth="176.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="APPETIZERS" textFill="#d2ab66">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Button>
+         <Button layoutX="1050.0" layoutY="47.0" mnemonicParsing="false" onAction="#BeveragesOrder" opacity="0.9" prefHeight="51.0" prefWidth="169.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="BEVERAGES" textFill="#d2ab66">
+            <font>
+               <Font name="System Bold" size="24.0" />
+            </font>
+         </Button>
+          <JFXButton fx:id="cartButton" buttonType="RAISED" layoutX="1469.0" layoutY="25.0" onAction="#Cart" opacity="0.8" prefHeight="40.0" prefWidth="67.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text=" ">
+              <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                      <image>
+                          <Image url="@image/shopping-cart.png" />
+                      </image>
+                  </ImageView>
+              </graphic>
+          </JFXButton>
+
+          <Label fx:id="cartItemCountLabel" layoutX="1500.0" layoutY="20.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 12px; -fx-background-radius: 10; -fx-padding: 2 5 2 5;" text="0" />
+      </children>
+   </AnchorPane>
+   <Line endX="776.0" endY="2.0" layoutX="773.0" layoutY="86.0" startX="-772.0" startY="2.0" stroke="#d2ab66" strokeWidth="4.0" />
+   <Button layoutX="721.0" layoutY="-19.0" mnemonicParsing="false" onAction="#HomePage" style="-fx-background-color: transparent; -fx-cursor: hand;">
+      <graphic>
+         <ImageView fitHeight="113.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+               <Image url="@image/logo1.png" />
+            </image>
+         </ImageView>
+      </graphic>
+   </Button>
+</AnchorPane>

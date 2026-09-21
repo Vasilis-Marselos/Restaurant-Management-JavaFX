@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="900.0" prefWidth="1550.0" style="-fx-background-color: #f5f5f1;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.SceneController">
+   <children>
+      <ImageView fitHeight="200.0" fitWidth="1558.0" layoutX="-8.0" pickOnBounds="true">
+         <image>
+            <Image url="@image/Menu.JPG" />
+         </image>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </ImageView>
+      <GridPane layoutX="86.0" layoutY="251.0" prefHeight="600.0" prefWidth="1380.0" style="-fx-background-color: white;">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="834.0" minWidth="10.0" prefWidth="725.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="941.0" minWidth="0.0" prefWidth="725.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Pane prefHeight="268.0" prefWidth="756.0">
+               <children>
+                   <ImageView fx:id="imageView1" fitHeight="200.0" fitWidth="234.0">
+                     <image>
+                        <Image url="@image/Cheesy_BEEF_BULking_omelette.png" />
+                     </image></ImageView>
+                  <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cheddar &amp; Beef Omelette">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αφράτη ομελέτα με ζουμερό μοσχαρίσιο κιμά, καραμελωμένο κόκκινο κρεμμύδι και λιωμένο τσένταρ.&#10;Ολοκληρώνεται με φρέσκα μυρωδικά και μια διακριτική πινελιά ελαιολάδου." wrappingWidth="319.44927978515625">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane disable="true" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+               <children>
+                  <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chocolate Protein Pancakes">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Πλούσια σοκολατένια pancakes με βελούδινη υφή, ενισχυμένα με πρωτεΐνη και αρωματισμένα με κανέλα. Σερβίρονται με fudge drizzle από κακάο και σιρόπι σφενδάμου." wrappingWidth="319.44927978515625">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="imageView2" fitHeight="200.0" fitWidth="234.0">
+                     <image>
+                        <Image url="@image/Chocolate_Protein_Pancakes.JPG" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="195.0" prefWidth="729.0" GridPane.rowIndex="1">
+               <children>
+                  <ImageView fx:id="imageView3" fitHeight="196.0" fitWidth="234.0" layoutY="2.0">
+                     <image>
+                        <Image url="@image/Spicy_chorizo_breakfast_hash.JPG" />
+                     </image>
+                  </ImageView>
+                  <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Chorizo &amp; Potato Hash">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Τραγανές πατάτες σοταρισμένες με πικάντικο chorizo, καραμελωμένο κόκκινο κρεμμύδι και σκόρδο. Ολοκληρώνεται με αυγό μάτι, καπνιστή πάπρικα και φρέσκα μυρωδικά." wrappingWidth="319.44927978515625">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein French Toast">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Χρυσαφένιο French toast με ολικής άλεσης ψωμί, αρωματισμένο με βανίλια, κανέλα και μοσχοκάρυδο. Σερβίρεται με φρέσκα blueberries και αγνό σιρόπι σφενδάμου." wrappingWidth="319.44927978515625">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="imageView4" fitHeight="196.0" fitWidth="234.0" layoutY="2.0">
+                     <image>
+                        <Image url="@image/Protein_French_Toast.JPG" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+               <children>
+                  <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Protein Banana Pancakes">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <Text layoutX="300.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Αφράτες βρώμης pancakes με μπανάνα, βανίλια και σοκολατένια chips. Αρωματισμένα με κανέλα, σερβίρονται με φρέσκια μπανάνα και αγνό σιρόπι σφενδάμου." wrappingWidth="319.44927978515625">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="imageView5" fitHeight="200.0" fitWidth="234.0" layoutY="1.0">
+                     <image>
+                        <Image url="@image/Protein_Banana_Pancakes.JPG" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+            <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <children>
+                  <Text layoutX="300.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Κρεμώδες ελληνικό γιαούρτι με βανίλια, τραγανή granola και ανάμεικτα δασικά μούρα. Ολοκληρώνεται με αγνό σιρόπι σφενδάμου για απόλυτη ισορροπία γεύσεων." wrappingWidth="319.44927978515625">
+                     <font>
+                        <Font name="System Italic" size="17.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d2ab66" layoutX="300.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Berry Protein Parfait">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Text>
+                  <ImageView fx:id="imageView6" fitHeight="200.0" fitWidth="234.0" layoutY="1.0">
+                     <image>
+                        <Image url="@image/Berry_Protein_Parfait.JPG" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </GridPane>
+      <Button layoutX="498.0" layoutY="92.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="HOME" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="630.0" layoutY="92.0" mnemonicParsing="false" onAction="#OurStory" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="OUR STORY" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="814.0" layoutY="92.0" mnemonicParsing="false" onAction="#breakfast_menu1" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="MENU" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="920.0" layoutY="92.0" mnemonicParsing="false" onAction="#Contact" style="-fx-background-color: transparent; -fx-cursor: hand;" stylesheets="@CSS/NavButtons.css" text="CONTACT" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="113.0" fitWidth="93.0" layoutX="724.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logo1.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="313.0" layoutY="149.0" mnemonicParsing="false" onAction="#breakfast_menu1" opacity="0.9" prefHeight="51.0" prefWidth="169.0" stylesheets="@CSS/HeaderButton.css" text="BREAKFAST" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="511.0" layoutY="149.0" mnemonicParsing="false" onAction="#maincourse_menu1" opacity="0.9" prefHeight="51.0" prefWidth="200.0" stylesheets="@CSS/HeaderButton.css" text="MAIN COURSE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="840.0" layoutY="149.0" mnemonicParsing="false" onAction="#appetizers_menu1" opacity="0.9" prefHeight="51.0" prefWidth="176.0" stylesheets="@CSS/HeaderButton.css" text="APPETIZERS" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="1058.0" layoutY="149.0" mnemonicParsing="false" onAction="#beverages_menu1" opacity="0.9" prefHeight="51.0" prefWidth="169.0" stylesheets="@CSS/HeaderButton.css" text="BEVERAGES" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+      <JFXButton graphicTextGap="0.0" layoutX="1467.0" layoutY="522.0" onAction="#breakfast_menu2" prefHeight="59.0" prefWidth="84.0" ripplerFill="#838383" style="-fx-cursor: hand;" text=" ">
+         <graphic>
+            <ImageView fitHeight="48.0" fitWidth="49.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/next.png" />
+               </image>
+            </ImageView>
+         </graphic>
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect>
+      </JFXButton>
+      <Button layoutX="713.0" layoutY="149.0" mnemonicParsing="false" onAction="#BreakfastOrder" prefHeight="51.0" prefWidth="115.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="ORDER" textFill="#d2ab66">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>

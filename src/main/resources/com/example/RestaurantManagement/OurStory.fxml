@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.SceneController">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="900.0" prefWidth="1550.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2000.0" prefWidth="1550.0">
+               <children>
+                  <ImageView fitHeight="400.0" fitWidth="1550.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@image/ourstory.jpg" />
+                     </image>
+                     <effect>
+                        <Lighting diffuseConstant="0.6">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+                  <Button layoutX="497.0" layoutY="91.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="HOME" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="629.0" layoutY="91.0" mnemonicParsing="false" onAction="#OurStory" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="OUR STORY" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="813.0" layoutY="91.0" mnemonicParsing="false" onAction="#breakfast_menu1" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="MENU" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="919.0" layoutY="91.0" mnemonicParsing="false" onAction="#Contact" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="CONTACT" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <ImageView fitHeight="113.0" fitWidth="93.0" layoutX="723.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/logo1.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="702.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABOUT">
+                     <font>
+                        <Font name="System Bold" size="40.0" />
+                     </font>
+                  </Text>
+                  <Text fill="#d2ab66" layoutX="553.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MAISON DE GOÛT">
+                     <font>
+                        <Font name="System Bold" size="50.0" />
+                     </font>
+                  </Text>
+                  <Pane layoutY="400.0" prefHeight="500.0" prefWidth="1550.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fill="#d2ab66" layoutX="941.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A STORY OF">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="941.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESILIENCE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="941.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="What began as an abandoned bakery became a symbol of quiet strength. With only family recipes and a deep love for honest flavor, Maison de Goût was built from the ground up. The early days were tough empty tables, long nights  but resilience carried us forward.&#10;&#10;&#10;Today, every dish tells that story. A story of passion, patience, and the belief that true taste is born through perseverance." wrappingWidth="407.7666015625">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="259.0" fitWidth="385.0" layoutX="318.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/chef1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Line endX="-60.0" layoutX="772.0" layoutY="112.0" startX="-91.2548828125" strokeWidth="2.0" />
+                        <Line endX="-91.2548828125" endY="21.75" layoutX="425.0" layoutY="357.0" startX="-91.2548828125" startY="-8.0" strokeWidth="2.0" />
+                        <Line endX="291.0" endY="-0.37255859375" layoutX="421.0" layoutY="379.0" startX="-85.62744140625" startY="-0.37255859375" strokeWidth="2.0" />
+                        <Line endX="-1.0" endY="202.62744140625" layoutX="713.0" layoutY="175.0" startX="-1.0" startY="-62.0" strokeWidth="2.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutY="900.0" prefHeight="200.0" prefWidth="1550.0" style="-fx-background-color: #d2ab66;">
+                     <children>
+                        <HBox layoutX="411.0" layoutY="51.0" prefHeight="120.0" prefWidth="729.0" spacing="40.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="40+">
+                                 <font>
+                                    <Font name="System Bold" size="60.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="-100.0" endY="102.5" opacity="0.5" startX="-100.0" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="20+">
+                                 <font>
+                                    <Font name="System Bold" size="60.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="-100.0" endY="102.5" opacity="0.5" startX="-100.0" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="30+">
+                                 <font>
+                                    <Font name="System Bold" size="60.0" />
+                                 </font>
+                              </Text>
+                              <Line endX="-100.0" endY="102.5" opacity="0.5" startX="-100.0" />
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="30+">
+                                 <font>
+                                    <Font name="System Bold" size="60.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="415.0" layoutY="123.0" prefHeight="31.0" prefWidth="721.0" spacing="90.0">
+                           <children>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Food Choices">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Starters">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="35.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Drink Choices">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="30.0" />
+                                 </HBox.margin>
+                              </Text>
+                              <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Years of Experience">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+                  <Pane layoutY="1100.0" prefHeight="1000.0" prefWidth="1550.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fill="#d2ab66" layoutX="941.0" layoutY="106.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A STORY OF">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="941.0" layoutY="146.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSION">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="941.0" layoutY="182.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Born from a deep love for timeless flavors, Maison de Goût was created to share more than meals — to share emotion, memory, and craft. Every recipe is a tribute to the passion that started it all: a dream stirred in a humble kitchen, now served with elegance on every plate." wrappingWidth="407.7666015625">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="259.0" fitWidth="385.0" layoutX="295.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/passion.jpg" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="300.0" fitWidth="237.0" layoutX="943.0" layoutY="489.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/decor.jpg" />
+                           </image>
+                        </ImageView>
+                        <Text fill="#d2ab66" layoutX="295.0" layoutY="525.0" strokeType="OUTSIDE" strokeWidth="0.0" text="A STORY OF">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="295.0" layoutY="565.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CULINARY EXECELLENCE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="295.0" layoutY="601.0" strokeType="OUTSIDE" strokeWidth="0.0" text="At Maison de Goût, excellence isn’t an act — it’s a tradition. Rooted in refined techniques and inspired by timeless French cuisine, every dish is crafted with precision, passion, and purpose. From the first bite to the last, we celebrate the art of flavor at its finest." wrappingWidth="407.7666015625">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="300.0" fitWidth="237.0" layoutX="1143.0" layoutY="430.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/decor2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Line endX="-100.0" endY="294.5" layoutX="1240.0" layoutY="491.0" startX="-100.0" startY="1.0" strokeWidth="5.0" />
+                        <Line endX="-100.0" endY="297.5" layoutX="1443.0" layoutY="430.0" startX="-100.0" startY="2.0" strokeWidth="5.0" />
+                        <Line endX="833.0" layoutX="715.0" layoutY="899.0" startX="-717.0" stroke="#d2ab66" strokeWidth="5.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

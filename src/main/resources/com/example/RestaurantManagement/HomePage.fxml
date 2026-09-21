@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.HomePage">
+   <children>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="900.0" prefWidth="1550.0">
+        <content>
+          <AnchorPane fx:id="sliderPane" minHeight="0.0" minWidth="0.0" prefWidth="1550.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="899.0" fitWidth="1542.0" focusTraversable="true">
+                     <effect>
+                        <Lighting diffuseConstant="0.8">
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </ImageView>
+                  <Pane prefHeight="900.0" prefWidth="1550.0">
+                     <children>
+                        <Button layoutX="497.0" layoutY="91.0" mnemonicParsing="false" onAction="#HomePage" prefHeight="31.0" prefWidth="92.0" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="HOME" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="629.0" layoutY="91.0" mnemonicParsing="false" onAction="#OurStory" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="OUR STORY" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="813.0" layoutY="91.0" mnemonicParsing="false" onAction="#breakfast_menu1" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="MENU" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Button layoutX="919.0" layoutY="91.0" mnemonicParsing="false" onAction="#Contact" style="-fx-background-color: transparent;" stylesheets="@CSS/NavButtons.css" text="CONTACT" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font>
+                        </Button>
+                        <Text fill="WHITE" layoutX="435.0" layoutY="399.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Maison de Goût">
+                           <font>
+                              <Font name="System Bold" size="90.0" />
+                           </font>
+                        </Text>
+                        <Text fill="WHITE" layoutX="341.0" layoutY="430.0" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="Taste the globe at Maison de Goût, where international flavors meet timeless elegance.">
+                           <font>
+                              <Font name="System Bold" size="21.0" />
+                           </font>
+                        </Text>
+                        <Text fill="#d2ab66" layoutX="723.0" layoutY="458.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Since 1992">
+                           <font>
+                              <Font name="System Bold" size="19.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="113.0" fitWidth="93.0" layoutX="723.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/logo1.png" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="711.0" layoutY="525.0" mnemonicParsing="false" onAction="#Reservation" prefHeight="40.0" prefWidth="120.0" stylesheets="@CSS/button.css" text="Reservation" />
+                     </children>
+                  </Pane>
+                  <Pane layoutY="900.0" prefHeight="600.0" prefWidth="1550.0" style="-fx-background-color: white;">
+                     <children>
+                        <Text fill="#d2ab66" layoutX="351.0" layoutY="187.0" strokeType="OUTSIDE" strokeWidth="0.0" text="THE STORY">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="351.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ABOUT US">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="351.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="After years of hardship, a family made the brave decision to leave their homeland in search of a better tomorrow. Homeland. &#10;&#10;&#10;Through struggles and perseverance in a new land, they worked tirelessly to create a place where people could gather and feel at home.&#10;&#10;With love, passion, and endless effort, Maison de Goût was born a space built on tradition, warmth, and the joy of sharing simple, honest flavors." wrappingWidth="407.7666015625">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Text>
+                        <ImageView fitHeight="259.0" fitWidth="385.0" layoutX="889.0" layoutY="171.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/chef1.jpg" />
+                           </image>
+                        </ImageView>
+                        <Line endX="-60.0" layoutX="1343.0" layoutY="193.0" startX="-91.2548828125" strokeWidth="2.0" />
+                        <Line endX="-91.2548828125" endY="21.75" layoutX="996.0" layoutY="438.0" startX="-91.2548828125" startY="-8.0" strokeWidth="2.0" />
+                        <Line endX="291.0" endY="-0.37255859375" layoutX="992.0" layoutY="460.0" startX="-85.62744140625" startY="-0.37255859375" strokeWidth="2.0" />
+                        <Line endX="-1.0" endY="202.62744140625" layoutX="1284.0" layoutY="256.0" startX="-1.0" startY="-62.0" strokeWidth="2.0" />
+                     </children>
+                  </Pane>
+                  <Pane layoutY="1500.0" prefHeight="330.0" prefWidth="1550.0" style="-fx-background-color: #F5F5F1;">
+                     <children>
+                        <ImageView fitHeight="80.0" fitWidth="130.0" layoutX="338.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/spaghetti.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="87.0" fitWidth="88.0" layoutX="732.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/meat.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="80.0" fitWidth="130.0" layoutX="1119.0" layoutY="78.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/martini.png" />
+                           </image>
+                        </ImageView>
+                        <Text layoutX="304.0" layoutY="192.423828125" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="European Classics">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="703.0" layoutY="192.423828125" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="American Comfort">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1130.0" layoutY="192.423828125" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Drinks">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="225.0" layoutY="215.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Indulge in handmade pastas, French-inspired entrées,&#10;and Mediterranean favorites prepared&#10;with authentic ingredients." textAlignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="623.0" layoutY="215.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="Juicy steaks, gourmet burgers, and smoky BBQ&#10;bold and satisfying flavors from the heart of America." textAlignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="1038.0" layoutY="214.0" opacity="0.7" strokeType="OUTSIDE" strokeWidth="0.0" text="A global wine list, signature cocktails,&#10;and premium spirits thoughtfully selected &#10;to enhance every dish." textAlignment="CENTER">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>

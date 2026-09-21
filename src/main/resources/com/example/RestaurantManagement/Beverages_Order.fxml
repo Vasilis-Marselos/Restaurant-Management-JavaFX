@@ -1,0 +1,1039 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1550.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.RestaurantManagement.DishController">
+   <children>
+      <Pane fx:id="DishPane" prefHeight="900.0" prefWidth="1550.0" style="-fx-background-color: #f5f5f1;">
+         <children>
+            <AnchorPane layoutY="-12.0" prefHeight="100.0" prefWidth="1550.0" style="-fx-background-color: White;">
+               <children>
+                  <Button layoutX="321.0" layoutY="47.0" mnemonicParsing="false" onAction="#BreakfastOrder" opacity="0.9" prefHeight="51.0" prefWidth="169.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="BREAKFAST" textFill="#d2ab66">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="519.0" layoutY="47.0" mnemonicParsing="false" onAction="#MainCourseOrder" opacity="0.9" prefHeight="51.0" prefWidth="200.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="MAIN COURSE" textFill="#d2ab66">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="832.0" layoutY="47.0" mnemonicParsing="false" onAction="#AppetizersOrder" opacity="0.9" prefHeight="51.0" prefWidth="176.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="APPETIZERS" textFill="#d2ab66">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <Button layoutX="1050.0" layoutY="47.0" mnemonicParsing="false" onAction="#BeveragesOrder" opacity="0.9" prefHeight="51.0" prefWidth="169.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text="BEVERAGES" textFill="#d2ab66">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Button>
+                  <JFXButton fx:id="cartButton" buttonType="RAISED" layoutX="1469.0" layoutY="25.0" onAction="#Cart" opacity="0.8" prefHeight="40.0" prefWidth="67.0" style="-fx-background-color: transparent; -fx-cursor: hand;" text=" ">
+                     <graphic>
+                        <ImageView fitHeight="43.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@image/shopping-cart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+
+                  <Label fx:id="cartItemCountLabel" layoutX="1500.0" layoutY="20.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 12px; -fx-background-radius: 10; -fx-padding: 2 5 2 5;" text="0" />
+               </children></AnchorPane>
+            <VBox fx:id="dishOptionsPane1" layoutX="353.0" layoutY="187.0" prefHeight="714.0" prefWidth="418.0" spacing="10" visible="false" />
+            <VBox fx:id="dishOptionsPane2" layoutX="777.0" layoutY="185.0" prefHeight="714.0" prefWidth="418.0" spacing="10" visible="false" />
+            <ImageView fitHeight="812.0" fitWidth="220.0" layoutY="88.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/vertical1breakfast.JPG" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.8">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="812.0" fitWidth="220.0" layoutX="1330.0" layoutY="88.0" pickOnBounds="true">
+               <image>
+                  <Image url="@image/vertical2breakfast.JPG" />
+               </image>
+               <effect>
+                  <Lighting diffuseConstant="0.8">
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </ImageView>
+            <Line endX="776.0" endY="2.0" layoutX="772.0" layoutY="86.0" startX="-772.0" startY="2.0" stroke="#d2ab66" strokeWidth="4.0" />
+            <Line endX="776.0" endY="50.0" layoutX="-556.0" layoutY="38.0" startX="776.0" startY="860.0" stroke="#d2ab66" strokeWidth="4.0" />
+            <Line endX="776.0" endY="50.0" layoutX="554.0" layoutY="38.0" startX="776.0" startY="860.0" stroke="#d2ab66" strokeWidth="4.0" />
+            <Text fill="#d2ab66" layoutX="598.0" layoutY="160.0" opacity="0.8" stroke="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="BEVERAGES MENU">
+               <font>
+                  <Font name="System Bold" size="40.0" />
+               </font>
+            </Text>
+            <VBox fx:id="dishCommentPane1" layoutX="510.0" layoutY="200.0" prefHeight="280.0" prefWidth="266.0" />
+            <VBox fx:id="dishCommentPane2" layoutX="229.0" layoutY="199.0" prefHeight="280.0" prefWidth="266.0" />
+            <VBox fx:id="dishCommentPane3" layoutX="510.0" layoutY="540.0" prefHeight="280.0" prefWidth="266.0" />
+            <VBox fx:id="dishCommentPane4" layoutX="1052.0" layoutY="199.0" prefHeight="280.0" prefWidth="266.0" />
+            <VBox fx:id="dishCommentPane5" layoutX="1052.0" layoutY="540.0" prefHeight="280.0" prefWidth="266.0" />
+            <VBox fx:id="dishCommentPane6" layoutX="814.0" layoutY="199.0" prefHeight="280.0" prefWidth="266.0" />
+            <VBox layoutX="305.0" layoutY="204.0" prefHeight="250.0" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Text fill="#d2ab66" strokeType="OUTSIDE" strokeWidth="0.0" text="RED">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onVegaSiciliaClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="VEGA SICILIA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onTiggnanelloClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="TIGNANELLO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onCatenaZapataClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="CATENA ZAPATA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onKathrynHallClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="KATHRYN HALL">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onPinotNoirClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="PINOT NOIR">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onZinfandelClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="ZINFANDEL">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="305.0" layoutY="542.0" prefHeight="250.0" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Text fill="#d2ab66" strokeType="OUTSIDE" strokeWidth="0.0" text="ROSE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onLeFragheRodonClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="LE FRAGHE RODON">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onGabrielskloofClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="GABRIELSKLOOF">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onBargemoneClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="BARGEMONE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onChateauDeChaintresClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="CHÂTEAU DE CHAINTRES">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onGrolleauClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="GROLLEAU">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onJoshCellarsRoseClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="JOSH CELLARS ROSE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="540.0" layoutY="204.0" prefHeight="250.0" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Text fill="#d2ab66" strokeType="OUTSIDE" strokeWidth="0.0" text="WHITE">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onSauvignonBlancClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="SAUVIGNON BLANC">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onCapensisChardonnayClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="CAPENSIS CHARDONNAY">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onOrnellaiaBiancoClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="ORNELLAIA BIANCO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onAmeixbarVulcaoClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="AMEIXMBAR VULCAO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onPinotGrigioClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="PINOT GRIGIO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onRieslingClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="RIESLING">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="835.0" layoutY="204.0" prefHeight="560.0" prefWidth="230.0" spacing="5.0">
+               <children>
+                  <Text fill="#d2ab66" strokeType="OUTSIDE" strokeWidth="0.0" text="SOFT DRINKS">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onCocaColaClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="COCA COLA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onCocaColaZerofClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="COCA COLA ZERO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onPepsiClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="PEPSI">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onPepsiZeroClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="PEPSI ZERO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onFantaOrangeClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="FANTA ORANGE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onFantaExoticClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="FANTA EXOTIC">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" onAction="#onFantaStrawberryKiwiClicked" opacity="0.5" prefHeight="31.0" prefWidth="228.0" style="-fx-background-color: white; -fx-cursor: hand;" text="FANTA STRAWBERRY &amp; KIWI">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onSpriteClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="SPRITE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onSchweppesPinkClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="SCHWEPPES PINK">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onSchweppesLeomnadeClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="SCHWEPPES LEMONADE">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onSchweppesSodaClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="SCHWEPPES SODA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onLiptonIceTeaLemonClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="LIPTON ICE TEA LEMON">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onLiptonIceTeaGreenClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="LIPTON ICE TEA GREEN">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onLiptonIceTeaPeachClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="LIPTON ICE TEA PEACH">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onLiptonIceTeaPeachZeroClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="LIPTON ICE TEA PEACH ZERO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onSanPellegrinoClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="SAN PELLEGRINO">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="228.0" onAction="#onWaterClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="WATER">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="1096.0" layoutY="204.0" prefHeight="250.0" prefWidth="220.0" spacing="5.0">
+               <children>
+                  <Text fill="#d2ab66" strokeType="OUTSIDE" strokeWidth="0.0" text="BEERS">
+                     <font>
+                        <Font name="System Bold" size="25.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </Text>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" onAction="#onBecksClicked" opacity="0.5" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: white; -fx-cursor: hand;" text="BECKS">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" onAction="#onAlfaClicked" opacity="0.5" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: white; -fx-cursor: hand;" text="ALFA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" onAction="#onBrahmaClicked" opacity="0.5" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: white; -fx-cursor: hand;" text="BRAHMA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" onAction="#onHarbinClicked" opacity="0.5" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: white; -fx-cursor: hand;" text="HARBIN">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="95.0" onAction="#onHeinekenClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="HEINEKEN">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <JFXButton buttonType="RAISED" contentDisplay="RIGHT" graphicTextGap="0.0" maxWidth="95.0" onAction="#onCoronaClicked" opacity="0.5" style="-fx-background-color: white; -fx-cursor: hand;" text="CORONA">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.8235294222831726" green="0.6705882549285889" blue="0.4000000059604645" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <Button layoutX="721.0" layoutY="-19.0" mnemonicParsing="false" onAction="#HomePage" style="-fx-background-color: transparent; -fx-cursor: hand;">
+               <graphic>
+                  <ImageView fitHeight="113.0" fitWidth="93.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image/logo1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
